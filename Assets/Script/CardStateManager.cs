@@ -104,21 +104,21 @@ namespace Script
                     popularity = (int) (popularity * effect.multiplier);
                 }
 
-                MoneyTurnEffects.RemoveAll(a => a.TurnLeft <= 0);
                 foreach (var effect in MoneyTurnEffects)
                 {
                     effect.TurnLeft--;
                     money += effect.offset;
                     money = (int) (money * effect.multiplier);
                 }
+                MoneyTurnEffects.RemoveAll(a => a.TurnLeft <= 0);
 
-                PopTurnEffects.RemoveAll(a => a.TurnLeft <= 0);
                 foreach (var effect in PopTurnEffects)
                 {
                     effect.TurnLeft--;
                     money += effect.offset;
                     money = (int) (money * effect.multiplier);
                 }   
+                PopTurnEffects.RemoveAll(a => a.TurnLeft <= 0);
                 #region moveturn
                 TurnNo++;
                 if (TurnNo==10)
@@ -126,7 +126,7 @@ namespace Script
                     TurnNo = 0;
                     DayNo++;
                 }
-                MoneyInvestments.ForEach(a => a.TurnLeft--);
+                MoneyInvestments.ForEach(a => { a.TurnLeft--; });
                 MoneyInvestments.ForEach(a =>
                 {
                     if (a.TurnLeft==0)
@@ -136,12 +136,30 @@ namespace Script
                     }
                 });
                 MoneyInvestments.RemoveAll(a => a.TurnLeft <= 0);
+                
+                PopInvestments.ForEach(a => { a.TurnLeft--; });
+                PopInvestments.ForEach(a =>
+                {
+                    if (a.TurnLeft==0)
+                    {
+                        Debug.Log($"Investment returned {a.offset.ToString()}");
+                        Popularity += a.offset;
+                    }
+                });
+                PopInvestments.RemoveAll(a => a.TurnLeft <= 0);
+                
                 #endregion
             }
             Debug.Log($"added {money.ToString()} money and {popularity.ToString()} popularity;\n" +
                       $"");
             Money += money;
             Popularity += popularity;
+
+            #region queueStuff
+
+            
+
+            #endregion
             if (card.x1)
             {
                 MoneyTurnEffects.Add(new effect(card.MoneyPerTurn,card.MoneyTurnCount));
@@ -196,16 +214,7 @@ namespace Script
                 PopInvestments.Add(new effect(card.PopularityReturnAfterTurn,card.PopularityReturnAfterTurnCount));
             }
 
-            PopInvestments.ForEach(a => a.TurnLeft--);
-            PopInvestments.ForEach(a =>
-            {
-                if (a.TurnLeft==0)
-                {
-                    Debug.Log($"Investment returned {a.offset.ToString()}");
-                    Popularity += a.offset;
-                }
-            });
-            PopInvestments.RemoveAll(a => a.TurnLeft <= 0);
+
             if (card.y5)
             {
                 PopActionEffects.Add(new effect(0,0,card.PopularityNextCardGainMultiplier));

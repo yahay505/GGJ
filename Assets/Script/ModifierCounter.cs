@@ -20,6 +20,11 @@ public class ModifierCounter : MonoBehaviour
         var txt = "";
         txt += "Daily:<br>";
         float multip=1;
+
+        #region Daily
+
+        
+
         foreach (var effect in FindObjectOfType<CardStateManager>().MoneyDailyEffects)
         {
             multip *= effect.multiplier;
@@ -40,23 +45,51 @@ public class ModifierCounter : MonoBehaviour
         {
             txt += $"{multip}x <sprite index= 1><br>";
         }
+        #endregion
+
+        #region TurnEffects
+        txt += "For Turns:<br>";
+
         
+
         foreach (var effect in FindObjectOfType<CardStateManager>().MoneyTurnEffects)
         {
-            txt += $"{effect.multiplier}x <sprite index= 0><br> for {effect.TurnLeft} <sprite index= 6>";
+            txt += $"{effect.multiplier}x <sprite index= 0> for {effect.TurnLeft} <sprite index= 6><br>";
         }
         foreach (var effect in FindObjectOfType<CardStateManager>().PopTurnEffects)
         {
-            txt += $"{effect.multiplier}x <sprite index= 1><br> for {effect.TurnLeft} <sprite index= 6>";
+            txt += $"{effect.multiplier}x <sprite index= 1> for {effect.TurnLeft} <sprite index= 6><br>";
         }
+        #endregion
+
+        #region Action
+
+        txt += "Next Card: <br>";
+
         multip = 1;
         foreach (var effect in FindObjectOfType<CardStateManager>().MoneyActionEffects)
         {
             multip *= effect.multiplier;
         }
+        if (multip!=1)
+        {
+            txt += $"{multip}x <sprite index= 1><br>";
+        } 
+        multip = 1;
+        foreach (var effect in FindObjectOfType<CardStateManager>().PopActionEffects)
+        {
+            multip *= effect.multiplier;
+        }
+        if (multip!=1)
+        {
+            txt += $"{multip}x <sprite index= 1><br>";
+        }
 
-        
-        
-        
+            #endregion
+
+            TextOutput.text = txt;
+
+
+
     }
 }
