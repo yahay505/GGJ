@@ -39,17 +39,23 @@ namespace Script
 
 
         #region Popularity
-        
+       
+        public bool y0;
         public int PopularityInstant;
+        public bool y1;
         public int PopularityPerTurn,PopularityTurnCount;
+        public bool y2;
         public float PopularityMultiplierForDay;
         
+        public bool y3;
         public float PopularityMultiplierForXTurns;
         public int PopularityMultiplierTurnCount;
 
+        public bool y4;
         public int PopularityReturnAfterTurn, PopularityReturnAfterTurnCount;
-
+        public bool y5;
         public float PopularityNextCardGainMultiplier;
+        public bool y6;
         public int PopularityNextCardGain;
 
 
