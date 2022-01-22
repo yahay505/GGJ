@@ -55,9 +55,9 @@ public class DragnDrop : MonoBehaviour
         IEnumerator twine(float a,float b)
         {
            
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < 4; i++)
             {
-                transform.localScale = Vector3.one* math.remap(0f, 29f, a, b, i);
+                transform.localScale = Vector3.one* math.remap(0f, 3f, a, b, i);
                 yield return null;
             }
         }
