@@ -18,10 +18,12 @@ public class StateShower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        var popularity = FindObjectOfType<CardStateManager>().Popularity/10;
+        var money = FindObjectOfType<CardStateManager>().Money/10;
         TextOutput.text =
-            (outputMoney ? $"<sprite index= 0> {FindObjectOfType<CardStateManager>().Money.ToString()}" : "") +
+            (outputMoney ? $"<sprite index= 0> {money.ToString()}" : "") +
             (OutputPop
-                ? $"<sprite index= 1> {FindObjectOfType<CardStateManager>().Popularity.ToString()}"
+                ? $"<br><sprite index= 1> {popularity.ToString()}"
                 : "");
     }
 }

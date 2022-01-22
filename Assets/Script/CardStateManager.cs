@@ -132,7 +132,7 @@ namespace Script
                     if (a.TurnLeft==0)
                     {
                         Debug.Log($"Investment returned {a.offset.ToString()}");
-                        // TODO: add back investment
+                        Money += a.offset;
                     }
                 });
                 MoneyInvestments.RemoveAll(a => a.TurnLeft <= 0);
@@ -140,7 +140,8 @@ namespace Script
             }
             Debug.Log($"added {money.ToString()} money and {popularity.ToString()} popularity;\n" +
                       $"");
-            //// TODO: add money to counter
+            Money += money;
+            Popularity += popularity;
             if (card.x1)
             {
                 MoneyTurnEffects.Add(new effect(card.MoneyPerTurn,card.MoneyTurnCount));
@@ -201,7 +202,7 @@ namespace Script
                 if (a.TurnLeft==0)
                 {
                     Debug.Log($"Investment returned {a.offset.ToString()}");
-                    // TODO: add back investment
+                    Popularity += a.offset;
                 }
             });
             PopInvestments.RemoveAll(a => a.TurnLeft <= 0);
