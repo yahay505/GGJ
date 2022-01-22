@@ -122,7 +122,7 @@ namespace Script.Editor
                 }
             }
 
-            
+            EditorUtility.SetDirty(card);
             // base.OnInspectorGUI();
         }
     }
