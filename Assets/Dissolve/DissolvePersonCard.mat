@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Dissolve
+  m_Name: DissolvePersonCard
   m_Shader: {fileID: -6465566751694194690, guid: 36bc80ab8b53f6c48a954016c0b26fc4, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -33,7 +33,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_3cfabd291ad94a5d92ff4f189a2a5208:
-        m_Texture: {fileID: 2800000, guid: 27b18fc2d2a93bd4b901866b30253106, type: 3}
+        m_Texture: {fileID: 2800000, guid: 694538c486dee8d4784156ee96ad0b19, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -61,7 +61,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 38bad4c433cca5643826a116fc10eb86, type: 3}
+        m_Texture: {fileID: 2800000, guid: 987f3df8444817e4f93ff305094c7b04, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
