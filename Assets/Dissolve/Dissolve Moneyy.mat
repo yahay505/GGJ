@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Dissolve Moneyy
-  m_Shader: {fileID: -6465566751694194690, guid: 51bc238702c66ee4896e87a54e49392d, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 9ffda2c5d88af3742ae50110c8c8d69f, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -39,6 +39,9 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors: []
+    m_Floats:
+    - _Fade: 1
+    - _Scale: 72.51
+    m_Colors:
+    - Color_60881081123b4767b6cdf157e45907dc: {r: 2.7913601, g: 0.058457803, b: 0, a: 0}
   m_BuildTextureStacks: []
