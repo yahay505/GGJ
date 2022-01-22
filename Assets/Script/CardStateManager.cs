@@ -7,7 +7,10 @@ namespace Script
 {
     public class CardStateManager : MonoBehaviour
     {
-        private int TurnNo, DayNo;
+        public int TurnNo, DayNo;
+        public int Popularity, Money;
+        public GameObject CardPrefab;
+        public Transform CardStartPoint;
         private void Awake()
         {
             Application.targetFrameRate = 30;
@@ -17,7 +20,7 @@ namespace Script
 
         public Card[] Deck
         {
-            get { return DeckObjects.Select(o => o.GetComponent<CardHolder>().Card).ToArray(); }
+            get { return DeckObjects.Select(o => o.GetComponent<CardHolder>()?.Card).ToArray(); }
         }
 
         public GameObject[] DeckObjects = new GameObject[] {null, null, null, null, null};
@@ -49,7 +52,7 @@ namespace Script
 
         public List<effect> MoneyInvestments = new List<effect>();
         public List<effect> PopInvestments = new List<effect>();
-        public void Play(Card card)
+        public void Play(Card card,GameObject cardObject)
         {
             #region evaluate
 
@@ -98,14 +101,25 @@ namespace Script
                     effect.TurnLeft--;
                     money += effect.offset;
                     money = (int) (money * effect.multiplier);
-                }
-
+                }   
+                #region moveturn
                 TurnNo++;
                 if (TurnNo==10)
                 {
                     TurnNo = 0;
                     DayNo++;
                 }
+                MoneyInvestments.ForEach(a => a.TurnLeft--);
+                MoneyInvestments.ForEach(a =>
+                {
+                    if (a.TurnLeft==0)
+                    {
+                        Debug.Log($"Investment returned {a.offset.ToString()}");
+                        // TODO: add back investment
+                    }
+                });
+                MoneyInvestments.RemoveAll(a => a.TurnLeft <= 0);
+                #endregion
             }
             Debug.Log($"added {money.ToString()} money and {popularity.ToString()} popularity;");
             //// TODO: add money to counter
@@ -129,16 +143,7 @@ namespace Script
                 MoneyInvestments.Add(new effect(card.MoneyReturnAfterTurn,card.MoneyReturnAfterTurnCount));
             }
 
-            MoneyInvestments.ForEach(a => a.TurnLeft--);
-            MoneyInvestments.ForEach(a =>
-            {
-                if (a.TurnLeft==0)
-                {
-                    Debug.Log($"Investment returned {a.offset.ToString()}");
-                    // TODO: add back investment
-                }
-            });
-            MoneyInvestments.RemoveAll(a => a.TurnLeft <= 0);
+
             if (card.x5)
             {
                 MoneyActionEffects.Add(new effect(0,0,card.MoneyNextCardGainMultiplier));
@@ -149,31 +154,31 @@ namespace Script
                 MoneyActionEffects.Add(new effect(card.MoneyNextCardGain,0));
             }
             
-            
+            #region pop
             
             
             if (card.y1)
             {
-                MoneyTurnEffects.Add(new effect(card.MoneyPerTurn,card.MoneyTurnCount));
+                PopTurnEffects.Add(new effect(card.PopularityPerTurn,card.PopularityTurnCount));
             }
 
             if (card.y2)
             {
-                MoneyDailyEffects.Add(new effect(0,0,card.MoneyMultiplierForDay));
+                PopDailyEffects.Add(new effect(0,0,card.PopularityMultiplierForDay));
             }
 
             if (card.y3)
             {
-                MoneyTurnEffects.Add(new effect(0,card.MoneyMultiplierTurnCount,card.MoneyMultiplierForXTurns));  
+                PopTurnEffects.Add(new effect(0,card.PopularityMultiplierTurnCount,card.PopularityMultiplierForXTurns));  
             }
 
             if (card.y4)
             {
-                MoneyInvestments.Add(new effect(card.MoneyReturnAfterTurn,card.MoneyReturnAfterTurnCount));
+                PopInvestments.Add(new effect(card.PopularityReturnAfterTurn,card.PopularityReturnAfterTurnCount));
             }
 
-            MoneyInvestments.ForEach(a => a.TurnLeft--);
-            MoneyInvestments.ForEach(a =>
+            PopInvestments.ForEach(a => a.TurnLeft--);
+            PopInvestments.ForEach(a =>
             {
                 if (a.TurnLeft==0)
                 {
@@ -181,19 +186,38 @@ namespace Script
                     // TODO: add back investment
                 }
             });
-            MoneyInvestments.RemoveAll(a => a.TurnLeft <= 0);
+            PopInvestments.RemoveAll(a => a.TurnLeft <= 0);
             if (card.y5)
             {
-                MoneyActionEffects.Add(new effect(0,0,card.MoneyNextCardGainMultiplier));
+                PopActionEffects.Add(new effect(0,0,card.PopularityNextCardGainMultiplier));
             }
 
             if (card.y6)
             {
-                MoneyActionEffects.Add(new effect(card.MoneyNextCardGain,0));
+                PopActionEffects.Add(new effect(card.PopularityNextCardGain,0));
             }
 
-            
             #endregion
+            #endregion
+
+            #region handleOldCard
+
+            History.Add(card);
+            cardObject.GetComponent<DragnDrop>().enabled = false;
+            cardObject.GetComponent<Cast>().enabled = false;
+            // Do Animation
+            var index = GetIndex(cardObject);
+            DeckObjects[index] = null;
+            
+
+            #endregion
+
+
+            var newcard=Instantiate(CardPrefab, CardStartPoint.position, CardStartPoint.rotation, null);
+            newcard.GetComponent<CardHolder>().Card = FindObjectOfType<CardList>().GetRandomCard();
+            DeckObjects[index] = newcard;
+            newcard.GetComponent<CardHolder>().Setup();
+            newcard.GetComponent<Cast>().StartMoveBack();
         }
 
         public class effect

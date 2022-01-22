@@ -15,7 +15,9 @@ public class DragnDrop : MonoBehaviour
 
     
     private void OnMouseDown()
-    {
+    {       
+        if (!enabled)
+            return;
         StopAllCoroutines();
 
         StartCoroutine(twine(1.1f,1.3f));
@@ -24,6 +26,8 @@ public class DragnDrop : MonoBehaviour
     }
     private void OnMouseUp()
     {
+        if (!enabled)
+            return;
         StopAllCoroutines();
         StartCoroutine(twine(1.3f,1.1f));
 
@@ -33,6 +37,8 @@ public class DragnDrop : MonoBehaviour
 
     private void OnMouseDrag()
     {
+        if (!enabled)
+            return;
         var x=mainCam.ScreenToWorldPoint(Input.mousePosition);
         x.z = transform.position.z;
         transform.position =x ;
@@ -40,6 +46,8 @@ public class DragnDrop : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        if (!enabled)
+            return;
         StopAllCoroutines();
         StartCoroutine(twine(1.0f, 1.1f));
 
@@ -48,6 +56,8 @@ public class DragnDrop : MonoBehaviour
     //
     private void OnMouseExit()
     {
+        if (!enabled)
+            return;
         StopAllCoroutines();
         StartCoroutine(twine(1.1f, 1.0f));
     }

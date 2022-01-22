@@ -7,7 +7,7 @@ namespace Script
     {
         private void Start()
         {
-            GetComponent<CardHolder>().AddToDeck(this.gameObject);
+            // GetComponent<CardHolder>().AddToDeck(this.gameObject);
         }
     }
 }
