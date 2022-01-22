@@ -25,8 +25,12 @@ public class SoundManager : MonoBehaviour
 
     public enum musics
     {
+<<<<<<< Updated upstream
         cardSelect,
         cardpickup,
         cardDrop,
+=======
+        
+>>>>>>> Stashed changes
     }
 }
