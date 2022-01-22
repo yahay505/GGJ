@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f1c8f2de2704e15a844de630e3fab67, type: 3}
-  m_Name: idiot come
+  m_Name: Holy Cross
   m_EditorClassIdentifier: 
   Image: {fileID: 0}
-  Text: "Bring the town idiot to kingdom\r"
+  Text: "The Holy cross wants to get inside of your kingdom, allow them in.\r"
   IsAction: 0
   useMoney: 1
   usePop: 1
-  MoneyEffect: -1
+  MoneyEffect: -2
   PopularityEffect: 0
   x0: 1
-  MoneyInstant: -200
+  MoneyInstant: -300
   x1: 0
   MoneyPerTurn: 0
   MoneyTurnCount: 0
   x2: 0
   MoneyMultiplierForDay: 1
-  x3: 0
-  MoneyMultiplierForXTurns: 0
-  MoneyMultiplierTurnCount: 0
+  x3: 1
+  MoneyMultiplierForXTurns: 0.6666
+  MoneyMultiplierTurnCount: 4
   x4: 0
   MoneyReturnAfterTurn: 0
   MoneyReturnAfterTurnCount: 0
@@ -39,13 +39,13 @@ MonoBehaviour:
   y0: 0
   PopularityInstant: 0
   y1: 0
-  PopularityPerTurn: 2
-  PopularityTurnCount: 3
+  PopularityPerTurn: 0
+  PopularityTurnCount: 0
   y2: 0
   PopularityMultiplierForDay: 0
   y3: 1
   PopularityMultiplierForXTurns: 2
-  PopularityMultiplierTurnCount: 3
+  PopularityMultiplierTurnCount: 2
   y4: 0
   PopularityReturnAfterTurn: 0
   PopularityReturnAfterTurnCount: 0

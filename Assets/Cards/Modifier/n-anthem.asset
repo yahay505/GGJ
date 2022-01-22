@@ -10,28 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f1c8f2de2704e15a844de630e3fab67, type: 3}
-  m_Name: idiot come
+  m_Name: n-anthem
   m_EditorClassIdentifier: 
   Image: {fileID: 0}
-  Text: "Bring the town idiot to kingdom\r"
+  Text: "Start playing national anthem in working places to motivate people (but
+    they will feel discomfort in the future) \r"
   IsAction: 0
   useMoney: 1
-  usePop: 1
-  MoneyEffect: -1
+  usePop: 0
+  MoneyEffect: 0
   PopularityEffect: 0
-  x0: 1
-  MoneyInstant: -200
+  x0: 0
+  MoneyInstant: 0
   x1: 0
   MoneyPerTurn: 0
-  MoneyTurnCount: 0
+  MoneyTurnCount: 3
   x2: 0
   MoneyMultiplierForDay: 1
-  x3: 0
-  MoneyMultiplierForXTurns: 0
-  MoneyMultiplierTurnCount: 0
-  x4: 0
-  MoneyReturnAfterTurn: 0
-  MoneyReturnAfterTurnCount: 0
+  x3: 1
+  MoneyMultiplierForXTurns: 1.5
+  MoneyMultiplierTurnCount: 3
+  x4: 1
+  MoneyReturnAfterTurn: -600
+  MoneyReturnAfterTurnCount: 3
   x5: 0
   MoneyNextCardGainMultiplier: 0
   x6: 0
@@ -39,13 +40,13 @@ MonoBehaviour:
   y0: 0
   PopularityInstant: 0
   y1: 0
-  PopularityPerTurn: 2
-  PopularityTurnCount: 3
+  PopularityPerTurn: 0
+  PopularityTurnCount: 0
   y2: 0
   PopularityMultiplierForDay: 0
-  y3: 1
-  PopularityMultiplierForXTurns: 2
-  PopularityMultiplierTurnCount: 3
+  y3: 0
+  PopularityMultiplierForXTurns: 0
+  PopularityMultiplierTurnCount: 0
   y4: 0
   PopularityReturnAfterTurn: 0
   PopularityReturnAfterTurnCount: 0
