@@ -7,7 +7,7 @@ namespace Script
     {
         public Sprite Image;
         public string Text;
-        public bool IsAction;
+        public bool IsAction, useMoney,usePop;
         public int MoneyEffect, PopularityEffect;
         #region effects
 

@@ -7,7 +7,7 @@ namespace Script.Editor
     [CustomEditor(typeof(Card))]
     public class CardInspector : UnityEditor.Editor
     {
-        private bool x,y;
+
         public override void OnInspectorGUI()
         {
             var card=(Card) target;
@@ -19,9 +19,9 @@ namespace Script.Editor
             card.MoneyEffect = EditorGUILayout.IntField("Effect on money (-3,3)", card.MoneyEffect);
             card.PopularityEffect = EditorGUILayout.IntField("Effect on popularity (-3,3)", card.PopularityEffect);
             
-            x = EditorGUILayout.Toggle("use Money", x);
+            card.useMoney = EditorGUILayout.Toggle("use Money", card.useMoney);
 
-            if (x)
+            if (card.useMoney)
             {
                 
                 card.x0 = EditorGUILayout.Toggle("Has Instant Money", card.x0);
@@ -70,9 +70,9 @@ namespace Script.Editor
                     card.MoneyNextCardGain = EditorGUILayout.IntField("amount", card.MoneyNextCardGain);
                 }
             }
-            y = EditorGUILayout.Toggle("use Popularity", y);
+            card.usePop = EditorGUILayout.Toggle("use Popularity", card.usePop);
 
-            if (y)
+            if (card.usePop)
             {
                 
                 card.x0 = EditorGUILayout.Toggle("Has Instant Popularity", card.x0);
