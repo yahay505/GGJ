@@ -24,7 +24,7 @@ MonoBehaviour:
   x1: 0
   MoneyPerTurn: 0
   MoneyTurnCount: 0
-  x2: 1
+  x2: 0
   MoneyMultiplierForDay: 5338
   x3: 0
   MoneyMultiplierForXTurns: 0

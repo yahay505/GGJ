@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace Script
@@ -14,6 +16,15 @@ namespace Script
         private void Awake()
         {
             Application.targetFrameRate = 30;
+            for (int i = 0; i < 5; i++)
+            {
+                CreateCard(i, out var card);
+            }
+        }
+
+        private void Start()
+        {
+            // throw new NotImplementedException();
         }
 
         public List<Card> History = new List<Card>();
@@ -37,6 +48,12 @@ namespace Script
             }
 
             return -1;
+        }
+
+        private void Update()
+        {
+            ;
+            // throw new NotImplementedException();
         }
 
         public List<effect> MoneyActionEffects = new List<effect>();
@@ -121,7 +138,8 @@ namespace Script
                 MoneyInvestments.RemoveAll(a => a.TurnLeft <= 0);
                 #endregion
             }
-            Debug.Log($"added {money.ToString()} money and {popularity.ToString()} popularity;");
+            Debug.Log($"added {money.ToString()} money and {popularity.ToString()} popularity;\n" +
+                      $"");
             //// TODO: add money to counter
             if (card.x1)
             {
@@ -206,6 +224,11 @@ namespace Script
             cardObject.GetComponent<DragnDrop>().enabled = false;
             cardObject.GetComponent<Cast>().enabled = false;
             // Do Animation
+            // TODO remove
+            //temporary
+            StartCoroutine(die(cardObject));
+            //
+            //
             var index = GetIndex(cardObject);
             DeckObjects[index] = null;
             
@@ -213,7 +236,24 @@ namespace Script
             #endregion
 
 
-            var newcard=Instantiate(CardPrefab, CardStartPoint.position, CardStartPoint.rotation, null);
+            CreateCard(index, out var newcard);
+
+            IEnumerator die(GameObject cardObject)
+            {
+                Color color = cardObject.GetComponent<SpriteRenderer>().color;
+                for (int i = 0; i < 15; i++)
+                {
+                    color.a = math.remap(0,14,1,0,i);
+                    cardObject.GetComponent<SpriteRenderer>().color = color;
+                    yield return null;
+                }
+                Destroy(cardObject);
+            }
+        }
+
+        private void CreateCard(int index, out GameObject newcard)
+        {
+            newcard = Instantiate(CardPrefab, CardStartPoint.position, CardStartPoint.rotation, null);
             newcard.GetComponent<CardHolder>().Card = FindObjectOfType<CardList>().GetRandomCard();
             DeckObjects[index] = newcard;
             newcard.GetComponent<CardHolder>().Setup();
