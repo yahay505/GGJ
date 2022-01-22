@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using Script;
 using Unity.Mathematics;
 using UnityEngine;
@@ -45,10 +43,11 @@ public class Cast : MonoBehaviour
 
     private IEnumerator MoveBack(Transform _transform)
     {
-        for (int i = 0; i < 30; i++)
+        var oldpos = transform.position;
+        for (int i = 0; i < 10; i++)
         {
-            var pos=math.remap(0f, 29f, 0, 1, i);
-            Vector3.Lerp(transform.position, _transform.position, pos);
+            var pos=math.remap(0f, 9f, 0, 1, i);
+            transform.position=UnityEngine.Vector3.Lerp(oldpos, _transform.position, pos);
             yield return null;
         }
     }
