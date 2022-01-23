@@ -8,6 +8,8 @@ public class SoundManager : MonoBehaviour
     public AudioSource SFX, SoundTrack;
     public AudioClip[] music,SFXClipls;
 
+    
+
     public void PlaySFX(SFXs sfx)
     {
         SFX.PlayOneShot(SFXClipls[(int)sfx]);
