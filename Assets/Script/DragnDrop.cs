@@ -3,73 +3,85 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+
 [RequireComponent(typeof(Collider2D))]
 public class DragnDrop : MonoBehaviour
 {
     private Camera mainCam;
+    private Coroutine twineCoro;
+
     void Start()
     {
-        mainCam=Camera.main;
+        mainCam = Camera.main;
     }
 
 
-    
     private void OnMouseDown()
-    {       
+    {
         if (!enabled)
             return;
-        StopAllCoroutines();
+        if (twineCoro != null)
+            StopCoroutine(twineCoro);
 
-        StartCoroutine(twine(1.1f,1.3f));
-
-        
+        twineCoro = StartCoroutine(twine(1.3f, 1.5f));
     }
+
     private void OnMouseUp()
     {
         if (!enabled)
             return;
-        StopAllCoroutines();
-        StartCoroutine(twine(1.3f,1.1f));
-
+        if (twineCoro != null)
+            StopCoroutine(twineCoro);
+        twineCoro = StartCoroutine(twine(1.5f, 1.3f));
     }
-
 
 
     private void OnMouseDrag()
     {
         if (!enabled)
             return;
-        var x=mainCam.ScreenToWorldPoint(Input.mousePosition);
+        var x = mainCam.ScreenToWorldPoint(Input.mousePosition);
         x.z = transform.position.z;
-        transform.position =x ;
+        transform.position = x;
     }
 
     private void OnMouseEnter()
     {
         if (!enabled)
             return;
-        StopAllCoroutines();
-        StartCoroutine(twine(1.0f, 1.1f));
 
-
+        if (twineCoro != null)
+            StopCoroutine(twineCoro);
+        twineCoro = StartCoroutine(twine(1.0f, 1.3f));
+        StartCoroutine(OnTop(true));
     }
+
     //
     private void OnMouseExit()
     {
         if (!enabled)
             return;
-        StopAllCoroutines();
-        StartCoroutine(twine(1.1f, 1.0f));
+        if (twineCoro != null)
+            StopCoroutine(twineCoro);
+        twineCoro = StartCoroutine(twine(1.3f, 1.0f));
+        StartCoroutine(OnTop(false));
     }
-    
-        IEnumerator twine(float a,float b)
+
+    IEnumerator twine(float a, float b)
+    {
+        for (int i = 0; i < 4; i++)
         {
-           
-            for (int i = 0; i < 4; i++)
-            {
-                transform.localScale = Vector3.one* math.remap(0f, 3f, a, b, i);
-                yield return null;
-            }
+            transform.localScale = Vector3.one * math.remap(0f, 3f, a, b, i);
+            yield return null;
         }
-    
+    }
+
+    IEnumerator OnTop(bool start)
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            transform.position += new Vector3(0, 1f / 4f, -1 / 4f) * (start ? 1 : -1);
+            yield return null;
+        }
+    }
 }

@@ -58,7 +58,7 @@ public class Cast : MonoBehaviour
     {
         var oldpos = transform.position;
             var newPosition = _transform.position;
-            newPosition.z = 0;
+            // newPosition.z = 0;
         
         for (int i = 0; i < 10; i++)
         {
