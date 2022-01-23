@@ -1084,7 +1084,7 @@
     },
     "m_Name": "AlphaTex",
     "m_DefaultReferenceName": "Texture2D_3cfabd291ad94a5d92ff4f189a2a5208",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "_AlphaTex",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
