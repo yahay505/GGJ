@@ -103,7 +103,7 @@ namespace Script
 
             if (Card.x0)
             {
-                txt += $"{Card.MoneyInstant}/10<sprite index= 0> now<br>";
+                txt += $"{Card.MoneyInstant/10}<sprite index= 0> now<br>";
             }
             if (Card.x1)
             {
