@@ -7,7 +7,7 @@ namespace Script
 {
     public class BackgroundFade : MonoBehaviour
     {
-        private SpriteRenderer[] bgs;
+        public SpriteRenderer[] bgs;
 
         private void Start()
         {
@@ -18,8 +18,9 @@ namespace Script
         {
             int bgtime = 0, expectedTime = 0;
             yield return null;
-            yield return new WaitUntil(() => FindObjectOfType<CardStateManager>().TurnNo != expectedTime);
-            expectedTime = FindObjectOfType<CardStateManager>().TurnNo;
+            while (true)
+            {
+                
             switch (expectedTime)
             {
                 case 0:
@@ -53,7 +54,10 @@ namespace Script
                 case 9:
                     StartCoroutine(DoFade(bgs[0], .5f));
                     break;
+            }
 
+            yield return new WaitUntil(() => FindObjectOfType<CardStateManager>().TurnNo != expectedTime);
+            expectedTime = FindObjectOfType<CardStateManager>().TurnNo;
 
             }
         }
@@ -68,7 +72,7 @@ namespace Script
         {
             var curr = renderer.color.a;
             var color = renderer.color;
-            for (int i = 0; i < 300; i++)
+            for (int i = 0; i < 100; i++)
             {
                 color.a = math.remap(0, 299, curr, to, i);
                 renderer.color = color;
