@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Express
   m_EditorClassIdentifier: 
   Image: {fileID: 0}
-  Text: "For faster travel, make steam-based expresses\r"
+  Text: "Manufacture steam trains for faster travel. \r"
   IsAction: 1
   useMoney: 1
   usePop: 1

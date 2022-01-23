@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Coal
   m_EditorClassIdentifier: 
   Image: {fileID: 0}
-  Text: "Harvest coal from mines (nobody likes to work in the mines)\r"
+  Text: "Open up coal mines, much to the disturbance of the people.\r"
   IsAction: 1
   useMoney: 1
   usePop: 1

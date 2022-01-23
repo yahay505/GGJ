@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: taxes
   m_EditorClassIdentifier: 
   Image: {fileID: 0}
-  Text: "Raise the taxes of a nearby town\r"
+  Text: "Raise the income tax of a nearby town by a bit.\r"
   IsAction: 1
   useMoney: 1
   usePop: 1

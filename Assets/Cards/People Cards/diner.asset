@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: diner
   m_EditorClassIdentifier: 
   Image: {fileID: 0}
-  Text: "Open a diner and make people instantly happy\r"
+  Text: "Open up food centers, making the public instantly happier.\r"
   IsAction: 1
   useMoney: 1
   usePop: 1

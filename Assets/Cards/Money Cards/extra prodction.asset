@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: extra prodction
   m_EditorClassIdentifier: 
   Image: {fileID: 0}
-  Text: "Open extra production centers near residences\r"
+  Text: "Open up some extra production lines, unfortunately near public housing.\r"
   IsAction: 1
   useMoney: 1
   usePop: 1

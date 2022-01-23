@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: illegal
   m_EditorClassIdentifier: 
   Image: {fileID: 0}
-  Text: "Start doing illegal trades with Heatherburn Kingdom \r"
+  Text: "The Heatherburn Kingdom starts an unethical trading system with local merchants.\r"
   IsAction: 1
   useMoney: 1
   usePop: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: park
   m_EditorClassIdentifier: 
   Image: {fileID: 0}
-  Text: "Make a park for people to relax.\r"
+  Text: "Open up parks and recreational areas for people to relax.\r"
   IsAction: 1
   useMoney: 1
   usePop: 1
