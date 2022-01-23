@@ -53,7 +53,7 @@ public class DragnDrop : MonoBehaviour
         if (twineCoro != null)
             StopCoroutine(twineCoro);
         safe = true;
-        twineCoro = StartCoroutine(twine(1.0f, 1.3f));
+        twineCoro = StartCoroutine(twine(1f, 1.3f));
         if(safe)
             StartCoroutine(OnTop(true));
     }
@@ -74,7 +74,7 @@ public class DragnDrop : MonoBehaviour
     {
         for (int i = 0; i < 4; i++)
         {
-            transform.localScale = Vector3.one * math.remap(0f, 3f, a, b, i);
+            transform.localScale = Vector3.one * math.remap(0f, 3, a*1.5f, b*1.5f, i);
             yield return null;
         }
     }

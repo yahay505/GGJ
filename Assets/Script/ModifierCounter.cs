@@ -18,7 +18,7 @@ public class ModifierCounter : MonoBehaviour
     void Update()
     {
         var txt = "";
-        txt += "Daily:<br>";
+        txt += $"Daily:({10-FindObjectOfType<CardStateManager>().TurnNo} <sprite index= 6> left)<br>";
         float multip=1;
 
         #region Daily

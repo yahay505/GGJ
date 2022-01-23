@@ -104,11 +104,11 @@ namespace Script
 
             if (Card.x0)
             {
-                txt += $"{Card.MoneyInstant/10}<sprite index= 0> now<br>";
+                txt += $"{Card.MoneyInstant/10} <sprite index= 0> now<br>";
             }
             if (Card.x1)
             {
-                txt += $"{Card.MoneyPerTurn/10}<sprite index= 0> for {Card.MoneyTurnCount}<sprite index= 6><br>";
+                txt += $"{Card.MoneyPerTurn/10} <sprite index= 0> for {Card.MoneyTurnCount}<sprite index= 6><br>";
             }
 
             if (Card.x2)
@@ -132,7 +132,7 @@ namespace Script
 
             if (Card.x6)
             {
-                txt += $"{Card.MoneyNextCardGain / 10}<sprite index= 0> for next <sprite index= 6><br>";
+                txt += $"{Card.MoneyNextCardGain / 10} <sprite index= 0> for next <sprite index= 6><br>";
             }
             #endregion
 
@@ -142,11 +142,11 @@ namespace Script
 
             if (Card.y0)
             {
-                txt += $"{Card.PopularityInstant}/10<sprite index=01> now<br>";
+                txt += $"{Card.PopularityInstant/10} <sprite index=01> now<br>";
             }
             if (Card.y1)
             {
-                txt += $"{Card.PopularityPerTurn/10}<sprite index=01> for {Card.PopularityTurnCount}<sprite index= 6><br>";
+                txt += $"{Card.PopularityPerTurn/10} <sprite index=01> for {Card.PopularityTurnCount}<sprite index= 6><br>";
             }
 
             if (Card.y2)
@@ -170,7 +170,7 @@ namespace Script
 
             if (Card.y6)
             {
-                txt += $"{Card.PopularityNextCardGain / 10}<sprite index=01> for next <sprite index= 6><br>";
+                txt += $"{Card.PopularityNextCardGain / 10} <sprite index=01> for next <sprite index= 6><br>";
             }
 
 
