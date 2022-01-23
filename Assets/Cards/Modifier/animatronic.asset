@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f1c8f2de2704e15a844de630e3fab67, type: 3}
   m_Name: animatronic
   m_EditorClassIdentifier: 
-  Image: {fileID: 0}
-  Text: "Create animatronics for little children to play, (animatronics aren\u2019t
-    that safe to play)\r"
+  Image: {fileID: 21300000, guid: 0591654299b840540a668e1032e4f38a, type: 3}
+  AlphaMap: {fileID: 2800000, guid: 984784ca2271c7142a880c2103f2fa76, type: 3}
+  Text: 'A team of two engineers create steam-based animatronics for kids to play
+    with, but they go ahead with it before passing the safety check.
+
+'
   IsAction: 0
   useMoney: 0
   usePop: 1

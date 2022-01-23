@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f1c8f2de2704e15a844de630e3fab67, type: 3}
   m_Name: travel
   m_EditorClassIdentifier: 
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: 758ded727857ae0438bb07cca908770f, type: 3}
+  AlphaMap: {fileID: 2800000, guid: 694538c486dee8d4784156ee96ad0b19, type: 3}
   Text: "Pave roads around the kingdom for ease of access.\r"
   IsAction: 1
   useMoney: 1
