@@ -16,12 +16,15 @@ namespace Script
         private void Awake()
         {
             Application.targetFrameRate = 30;
+        }
+
+        public void GOGOGOGO()
+        {
             for (int i = 0; i < 5; i++)
             {
                 CreateCard(i, out var card);
             }
         }
-
         private void Start()
         {
             // throw new NotImplementedException();
