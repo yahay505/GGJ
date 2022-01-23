@@ -70,9 +70,9 @@ namespace Script
         {
             var curr = renderer.color.a;
             var color = renderer.color;
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 10; i++)
             {
-                color.a = math.remap(0, 99, curr, to, i);
+                color.a = math.remap(0, 299, curr, to, i);
                 renderer.color = color;
                 yield return null;
             }
