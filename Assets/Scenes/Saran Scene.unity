@@ -299,7 +299,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Pause
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a0a1072f670515c40bfb54208bc606aa, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 3692254225027392356, guid: a0a1072f670515c40bfb54208bc606aa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -453,10 +453,10 @@ MonoBehaviour:
   m_text: "After 5 turns, x2 aksjndfamsdnflasfkn hayat k\u0131sa kusia<sprite index=
     1>slm <sprite index= 0> merhaba  burda yaz <sprite index= 0>allah yok <sprite
     index=2> beat. Tanri yok<sprite index= 3>ama \nKasif var<sprite index= 4>minik
-    evler<sprite index= 5>seker\nTimer lazim<sprite index= 6>chat\n"
+    evler<sprite index= 5>seker\nTimer lazim<sprite index= 6>chat --- asdnfkjasndlfkm\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a0a1072f670515c40bfb54208bc606aa, type: 2}
-  m_sharedMaterial: {fileID: 3692254225027392356, guid: a0a1072f670515c40bfb54208bc606aa, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 21b269138f315a74499ff1ba886a915c, type: 2}
+  m_sharedMaterial: {fileID: -5129335719580778104, guid: 21b269138f315a74499ff1ba886a915c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -472,7 +472,7 @@ MonoBehaviour:
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
+  m_spriteAsset: {fileID: 11400000, guid: a3c5d604fcd11da4cb4bbd83c57eefa1, type: 2}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
   m_TextStyleHashCode: -1183493901
@@ -544,7 +544,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3692254225027392356, guid: a0a1072f670515c40bfb54208bc606aa, type: 2}
+  - {fileID: -5129335719580778104, guid: 21b269138f315a74499ff1ba886a915c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -854,7 +854,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Voxham Kingdom
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a0a1072f670515c40bfb54208bc606aa, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 3692254225027392356, guid: a0a1072f670515c40bfb54208bc606aa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1813,7 +1813,7 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a0a1072f670515c40bfb54208bc606aa, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 3692254225027392356, guid: a0a1072f670515c40bfb54208bc606aa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2117,7 +2117,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Start
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a0a1072f670515c40bfb54208bc606aa, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 3692254225027392356, guid: a0a1072f670515c40bfb54208bc606aa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2258,7 +2258,7 @@ MonoBehaviour:
 
     Kasif Sahin Dusko: Artist'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a0a1072f670515c40bfb54208bc606aa, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 3692254225027392356, guid: a0a1072f670515c40bfb54208bc606aa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2607,7 +2607,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Credits
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a0a1072f670515c40bfb54208bc606aa, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 3692254225027392356, guid: a0a1072f670515c40bfb54208bc606aa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2741,7 +2741,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Credits
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a0a1072f670515c40bfb54208bc606aa, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 3692254225027392356, guid: a0a1072f670515c40bfb54208bc606aa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2875,7 +2875,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Active Modifiers
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a0a1072f670515c40bfb54208bc606aa, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 3692254225027392356, guid: a0a1072f670515c40bfb54208bc606aa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
