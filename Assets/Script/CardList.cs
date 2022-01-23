@@ -13,12 +13,12 @@ namespace Script
         {
             get
             {
-                _cards ??= GetAllInstances<Card>();
+                // _cards ??= GetAllInstances<Card>();
                 return _cards;
             }
         }
 
-        private List<Card> _cards;
+        public List<Card> _cards;
 
 
         private void Start()
@@ -35,12 +35,12 @@ namespace Script
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public static List<T> GetAllInstances<T>() where T : ScriptableObject
-        {
-            return AssetDatabase.FindAssets($"t: {typeof(T).Name}").ToList()
-                .Select(AssetDatabase.GUIDToAssetPath)
-                .Select(AssetDatabase.LoadAssetAtPath<T>)
-                .ToList();
-        }
+        // public static List<T> GetAllInstances<T>() where T : ScriptableObject
+        // {
+        //     return AssetDatabase.FindAssets($"t: {typeof(T).Name}").ToList()
+        //         .Select(AssetDatabase.GUIDToAssetPath)
+        //         .Select(AssetDatabase.LoadAssetAtPath<T>)
+        //         .ToList();
+        // }
     }
 }
