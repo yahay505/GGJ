@@ -12,6 +12,7 @@ namespace Script.Editor
         {
             var card=(Card) target;
             card.Image = (Sprite) EditorGUILayout.ObjectField("Sprite",card.Image, typeof(Sprite), false);
+            card.AlphaMap = (Texture) EditorGUILayout.ObjectField("Sprite",card.AlphaMap, typeof(Texture), false);
             EditorGUILayout.LabelField("Text info:");
             card.Text = EditorGUILayout.TextArea(card.Text);
 

@@ -6,6 +6,7 @@ namespace Script
     public class Card : ScriptableObject
     {
         public Sprite Image;
+        public Texture AlphaMap;
         public string Text;
         public bool IsAction, useMoney,usePop;
         public int MoneyEffect, PopularityEffect;

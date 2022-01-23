@@ -11,7 +11,8 @@ namespace Script
         public void Setup()
         {
             GetComponent<SpriteRenderer>().sprite = Card.Image ? Card.Image : GetComponent<SpriteRenderer>().sprite;
-
+            GetComponent<SpriteRenderer>().material.SetTexture("_AlphaTex",Card.AlphaMap);
+            GetComponent<SpriteRenderer>().material = new Material(GetComponent<SpriteRenderer>().material);
             Lore.text = Card.Text;
             Stats.text = Card.IsAction? GenerateActionStat(): GenerateModifierStat();
             if(!Card.IsAction)
