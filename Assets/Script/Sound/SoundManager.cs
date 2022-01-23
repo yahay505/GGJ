@@ -21,14 +21,14 @@ public class SoundManager : MonoBehaviour
     public enum SFXs
     {
         
+        cardHover,
+        cardpickup,
+        cardDrop,
+        
     }
 
     public enum musics
     {
-        cardSelect,
-        cardpickup,
-        cardDrop,
-        
 
     }
 }

@@ -10,7 +10,7 @@ namespace Script
     public class CardStateManager : MonoBehaviour
     {
         public int TurnNo, DayNo;
-        public int Popularity, Money;
+        public int Popularity=1000, Money=1000;
         public GameObject CardPrefab;
         public Transform CardStartPoint;
         private void Awake()
