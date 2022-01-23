@@ -9,7 +9,7 @@ public class DragnDrop : MonoBehaviour
 {
     private Camera mainCam;
     private Coroutine twineCoro;
-
+    public bool safe=true;
     void Start()
     {
         mainCam = Camera.main;
@@ -22,8 +22,8 @@ public class DragnDrop : MonoBehaviour
             return;
         if (twineCoro != null)
             StopCoroutine(twineCoro);
-
-        twineCoro = StartCoroutine(twine(1.3f, 1.5f));
+        safe = false;
+        twineCoro = StartCoroutine(twine(1.3f, 2f));
     }
 
     private void OnMouseUp()
@@ -32,7 +32,7 @@ public class DragnDrop : MonoBehaviour
             return;
         if (twineCoro != null)
             StopCoroutine(twineCoro);
-        twineCoro = StartCoroutine(twine(1.5f, 1.3f));
+        twineCoro = StartCoroutine(twine(2f, 1.3f));
     }
 
 
@@ -52,8 +52,10 @@ public class DragnDrop : MonoBehaviour
 
         if (twineCoro != null)
             StopCoroutine(twineCoro);
+        safe = true;
         twineCoro = StartCoroutine(twine(1.0f, 1.3f));
-        StartCoroutine(OnTop(true));
+        if(safe)
+            StartCoroutine(OnTop(true));
     }
 
     //
@@ -64,7 +66,8 @@ public class DragnDrop : MonoBehaviour
         if (twineCoro != null)
             StopCoroutine(twineCoro);
         twineCoro = StartCoroutine(twine(1.3f, 1.0f));
-        StartCoroutine(OnTop(false));
+        if(safe)
+            StartCoroutine(OnTop(false));
     }
 
     IEnumerator twine(float a, float b)
@@ -78,9 +81,14 @@ public class DragnDrop : MonoBehaviour
 
     IEnumerator OnTop(bool start)
     {
+        if (!start)
+        {
+             GetComponent<Cast>().StartMoveBack();
+             yield break;
+        }
         for (int i = 0; i < 4; i++)
         {
-            transform.position += new Vector3(0, 1f / 4f, -1 / 4f) * (start ? 1 : -1);
+            transform.position += new Vector3(0, 1f / 4f, -1 / 4f) ;
             yield return null;
         }
     }

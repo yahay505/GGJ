@@ -66,5 +66,7 @@ public class Cast : MonoBehaviour
             transform.position=UnityEngine.Vector3.Lerp(oldpos, newPosition, pos);
             yield return null;
         }
+        GetComponent<DragnDrop>().safe = true;
+
     }
 }
