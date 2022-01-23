@@ -160,6 +160,11 @@ namespace Script
             
 
             #endregion
+
+            #region money
+
+            
+
             if (card.x1)
             {
                 MoneyTurnEffects.Add(new effect(card.MoneyPerTurn,card.MoneyTurnCount));
@@ -191,6 +196,7 @@ namespace Script
                 MoneyActionEffects.Add(new effect(card.MoneyNextCardGain,0));
             }
             
+            #endregion
             #region pop
             
             
@@ -250,11 +256,16 @@ namespace Script
 
             IEnumerator die(GameObject cardObject)
             {
-                Color color = cardObject.GetComponent<SpriteRenderer>().color;
+                var mat = cardObject.GetComponent<SpriteRenderer>().material;
+                for (int i = 0; i < cardObject.transform.childCount; i++)
+                {
+                    cardObject.transform.GetChild(i).gameObject.SetActive(false);
+                }
+                FindObjectOfType<SoundManager>().PlaySFX(SoundManager.SFXs.cardCast);
                 for (int i = 0; i < 15; i++)
                 {
-                    color.a = math.remap(0,14,1,0,i);
-                    cardObject.GetComponent<SpriteRenderer>().color = color;
+                    mat.SetFloat("_Fade", math.remap(0,14,1,0,i));
+                    // cardObject.GetComponent<SpriteRenderer>().color = color;
                     yield return null;
                 }
                 Destroy(cardObject);

@@ -24,7 +24,7 @@ public class SoundManager : MonoBehaviour
         cardHover,
         cardpickup,
         cardDrop,
-        
+        cardCast,
     }
 
     public enum musics

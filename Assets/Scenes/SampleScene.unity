@@ -168,6 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 374722342}
   - component: {fileID: 374722341}
+  - component: {fileID: 374722343}
   m_Layer: 0
   m_Name: cark_0
   m_TagString: Untagged
@@ -240,6 +241,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &374722343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374722340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 858278668fcc75543b542a82dbab0d67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rpm: 60
 --- !u!1 &466669218
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,6 +613,8 @@ MonoBehaviour:
   SFXClipls:
   - {fileID: 8300000, guid: c45b1277fe76cad4db9b83fe2f29f4b7, type: 3}
   - {fileID: 8300000, guid: 6570e37ec318cca4fa0a570c30708ea7, type: 3}
+  - {fileID: 8300000, guid: 6570e37ec318cca4fa0a570c30708ea7, type: 3}
+  - {fileID: 8300000, guid: 0441542600e596d40a263ffb86520984, type: 3}
 --- !u!1 &708317366
 GameObject:
   m_ObjectHideFlags: 0
