@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Carnival
   m_EditorClassIdentifier: 
   Image: {fileID: 0}
-  Text: "Host a carnival for people\r"
+  Text: "The circus is in town! Host a carnival.\r"
   IsAction: 1
   useMoney: 1
   usePop: 1

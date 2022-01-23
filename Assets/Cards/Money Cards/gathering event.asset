@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: gathering event
   m_EditorClassIdentifier: 
   Image: {fileID: 0}
-  Text: "To keep relationships steady, a gathering event is hosted in the name of
-    Polybourne Kingdom but the food is produced by diners\r"
+  Text: "To keep inter-kingdom relationships steady, host a gathering - where all
+    the meals belonging to the public are served to citizens of a different kingdom,
+    Polybourne.\r"
   IsAction: 1
   useMoney: 1
   usePop: 1
@@ -38,7 +39,7 @@ MonoBehaviour:
   x6: 0
   MoneyNextCardGain: 0
   y0: 1
-  PopularityInstant: -450
+  PopularityInstant: -400
   y1: 0
   PopularityPerTurn: 0
   PopularityTurnCount: 0

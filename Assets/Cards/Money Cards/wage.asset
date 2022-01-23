@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: wage
   m_EditorClassIdentifier: 
   Image: {fileID: 0}
-  Text: "Lower the minimum wage\r"
+  Text: "Lower the minimum wage.\r"
   IsAction: 1
   useMoney: 1
   usePop: 1

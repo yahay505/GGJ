@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pub
   m_EditorClassIdentifier: 
   Image: {fileID: 0}
-  Text: "Open a pub for people to drink and have fun.\r"
+  Text: "Open up a pub for the locals to hang out at.\r"
   IsAction: 1
   useMoney: 1
   usePop: 1

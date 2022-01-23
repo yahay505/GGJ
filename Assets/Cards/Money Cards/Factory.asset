@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Factory
   m_EditorClassIdentifier: 
   Image: {fileID: 0}
-  Text: "Open a new factory and increase the production rate \r"
+  Text: Open up a new factory, increasing the production rate.
   IsAction: 1
   useMoney: 1
   usePop: 1
   MoneyEffect: 2
-  PopularityEffect: -1
+  PopularityEffect: 1
   x0: 1
   MoneyInstant: 350
   x1: 0
@@ -37,7 +37,7 @@ MonoBehaviour:
   x6: 0
   MoneyNextCardGain: 0
   y0: 1
-  PopularityInstant: -150
+  PopularityInstant: 150
   y1: 0
   PopularityPerTurn: 0
   PopularityTurnCount: 0

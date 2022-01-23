@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: beach
   m_EditorClassIdentifier: 
   Image: {fileID: 0}
-  Text: "Provide jet ski and beaches for beach tourism\r"
+  Text: "Spare jet skis and shore space for beach tourism.\r"
   IsAction: 1
   useMoney: 1
   usePop: 1

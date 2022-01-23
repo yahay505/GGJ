@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: aircraft
   m_EditorClassIdentifier: 
   Image: {fileID: 0}
-  Text: "To explore new areas and new opportunities for trade, create aircraft\r"
+  Text: "A team of engineers create the zeppelin, so that more land can be explored
+    and more trading opportunities are discovered.\r"
   IsAction: 1
   useMoney: 1
   usePop: 1
   MoneyEffect: 2
-  PopularityEffect: -1
+  PopularityEffect: 1
   x0: 1
-  MoneyInstant: 350
+  MoneyInstant: 400
   x1: 0
   MoneyPerTurn: 0
   MoneyTurnCount: 0
@@ -37,7 +38,7 @@ MonoBehaviour:
   x6: 0
   MoneyNextCardGain: 0
   y0: 1
-  PopularityInstant: -150
+  PopularityInstant: 200
   y1: 0
   PopularityPerTurn: 0
   PopularityTurnCount: 0

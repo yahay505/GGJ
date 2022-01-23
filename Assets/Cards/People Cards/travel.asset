@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: travel
   m_EditorClassIdentifier: 
   Image: {fileID: 0}
-  Text: "Make infrastructures for travel around the kingdom and make people more
-    comfortable and happy.\r"
+  Text: "Pave roads around the kingdom for ease of access.\r"
   IsAction: 1
   useMoney: 1
   usePop: 1

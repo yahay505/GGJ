@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: museum
   m_EditorClassIdentifier: 
   Image: {fileID: 0}
-  Text: "To honor our glorious and magnificent history, open a museum to show our
-    past.\r"
+  Text: To honor the glorious and magnificent history, open up a museum.
   IsAction: 1
   useMoney: 1
   usePop: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: force
   m_EditorClassIdentifier: 
   Image: {fileID: 0}
-  Text: "To make community work faster, impose a force on them.\r"
+  Text: "Community work is lacking. Impose light military pressure on them.\r"
   IsAction: 1
   useMoney: 1
   usePop: 1
@@ -37,7 +37,7 @@ MonoBehaviour:
   x6: 0
   MoneyNextCardGain: 0
   y0: 1
-  PopularityInstant: -450
+  PopularityInstant: -400
   y1: 0
   PopularityPerTurn: 0
   PopularityTurnCount: 0
